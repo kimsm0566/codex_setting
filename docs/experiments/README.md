@@ -26,15 +26,23 @@ Each substantial experiment folder should usually contain:
 - `RESULT.md`
   - current or final outcome
 
+These files should also record the containerized runtime used for the experiment:
+
+- Docker image tag or digest
+- keep-alive container name
+- GPU runtime flags or device binding
+
 ## Lifecycle
 
-1. Create the folder.
-2. Draft `PLAN.md`.
-3. Review and refine the plan.
-4. Convert the agreed plan into `SPEC.md`.
-5. Run smoke validation first.
-6. Run matched comparison only after the path is stable.
-7. Record the outcome in `RESULT.md` and `RESULTS_LEDGER.md`.
+1. Build or refresh the GPU-capable Docker image.
+2. Start or reuse the keep-alive experiment container.
+3. Create the folder.
+4. Draft `PLAN.md`.
+5. Review and refine the plan.
+6. Convert the agreed plan into `SPEC.md`.
+7. Run smoke validation first.
+8. Run matched comparison only after the path is stable.
+9. Record the outcome in `RESULT.md` and `RESULTS_LEDGER.md`.
 
 ## Language Policy
 

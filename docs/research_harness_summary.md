@@ -12,18 +12,21 @@ Improve the communication-performance frontier while preserving reproducibility 
 - evaluation protocol
 - results ledger
 - literature notes
+- Docker image and keep-alive container metadata recorded per experiment
 
 ## Experiment Lifecycle
 
 1. Choose one concrete hypothesis.
-2. Create a dated experiment folder:
+2. Build or refresh the GPU-capable Docker image for the experiment environment.
+3. Start or reuse the keep-alive experiment container.
+4. Create a dated experiment folder:
    - `YYYY-MM-DD_HH-MM_vNN_short-slug`
-3. Write `PLAN.md` for collaboration and review.
-4. Convert the agreed plan into `SPEC.md`.
-5. Implement the smallest code change that tests the hypothesis.
-6. Run smoke validation first.
-7. Run matched comparison only after the path is stable.
-8. Record outcomes in `RESULT.md` and the ledger.
+5. Write `PLAN.md` for collaboration and review.
+6. Convert the agreed plan into `SPEC.md`.
+7. Implement the smallest code change that tests the hypothesis.
+8. Run smoke validation first.
+9. Run matched comparison only after the path is stable.
+10. Record outcomes in `RESULT.md` and the ledger.
 
 ## Evaluation Contract
 
@@ -42,6 +45,7 @@ Secondary metrics:
 
 Guardrails:
 
+- stable containerized runtime for matched comparisons
 - reproducibility of run configuration
 - schema compatibility
 - training stability

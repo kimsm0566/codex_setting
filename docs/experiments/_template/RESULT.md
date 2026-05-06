@@ -5,6 +5,9 @@
 - 실험 id:
 - 상태: 진행중 | 완료 | 중단
 - 최종 업데이트:
+- docker image:
+- container name:
+- gpu runtime:
 
 ## 요약
 

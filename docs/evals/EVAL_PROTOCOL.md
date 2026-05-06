@@ -36,6 +36,9 @@ Canonical evaluation asks:
 
 Do not compare runs as if they were equivalent when any of the following changed without being explicitly controlled for:
 
+- docker image
+- container runtime options
+- gpu availability or gpu binding
 - default hyperparameters
 - result schema
 - data partition semantics

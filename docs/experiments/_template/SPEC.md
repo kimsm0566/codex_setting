@@ -6,9 +6,13 @@
 - 기준 문서:
 - 상태:
 - 담당자:
+- docker image:
+- container name:
+- gpu runtime:
 
 ## 고정 조건
 
+- host or cluster:
 - dataset:
 - partition type:
 - n_clients:

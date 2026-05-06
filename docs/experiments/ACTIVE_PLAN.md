@@ -11,6 +11,7 @@ Establish a reliable research workflow that helps agents and humans improve the 
   - done: create behavior and harness summary docs
   - done: create experiment and evaluation templates
 - Phase 1: project-specific adaptation
+  - todo: define standard Docker image and keep-alive container workflow
   - todo: map important code paths
   - todo: define canonical baseline conditions
   - todo: define seed policy for claim-making runs
@@ -20,6 +21,7 @@ Establish a reliable research workflow that helps agents and humans improve the 
 
 ## Immediate Next Actions
 
+- define the standard GPU-capable Docker image and container launch convention
 - adapt this template to the target repository
 - define a baseline comparison contract
 - add the first real experiment folder

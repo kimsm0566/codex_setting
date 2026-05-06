@@ -34,18 +34,31 @@ Treat all performance claims as comparative. A change is only an improvement if 
 ## Research Workflow
 
 1. Start from a clear hypothesis.
-2. For substantial experiments or behavior-changing code work, use a dated, versioned folder under `docs/experiments/`.
-3. Draft `PLAN.md` before execution so the user can review and refine the approach.
-4. After alignment, write or update `SPEC.md` with agreed fixed conditions and validation path.
-5. Make the smallest code change that tests one concrete idea.
-6. Run the smallest feasible validation before broad sweeps.
-7. Record meaningful runs in a results ledger.
-8. Report wins, regressions, and unknowns.
+2. Build or update a Docker image that can use GPU on the target machine.
+3. Start or reuse a keep-alive experiment container from that image and run experiments inside it.
+4. For substantial experiments or behavior-changing code work, use a dated, versioned folder under `docs/experiments/`.
+5. Draft `PLAN.md` before execution so the user can review and refine the approach.
+6. After alignment, write or update `SPEC.md` with agreed fixed conditions and validation path.
+7. Make the smallest code change that tests one concrete idea.
+8. Run the smallest feasible validation before broad sweeps.
+9. Record meaningful runs in a results ledger.
+10. Report wins, regressions, and unknowns.
+
+## Runtime Environment Policy
+
+- Default experiment runtime is Docker, not the host shell.
+- The Docker image should be built so the container can access GPU when the machine provides one.
+- Keep one long-lived experiment container alive for iterative runs unless isolation requires a fresh container.
+- Record the image tag, container name, and relevant runtime options in experiment artifacts.
+- If a task must run outside Docker or without GPU, document the reason explicitly in the plan or spec.
 
 ## Reproducibility Rules
 
 When changing training or evaluation logic, preserve or explicitly re-document:
 
+- docker image tag or digest
+- container name
+- gpu runtime setting
 - dataset
 - partition type
 - number of clients

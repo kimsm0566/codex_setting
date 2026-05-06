@@ -5,6 +5,8 @@
 - 실험 id:
 - 시작 일시:
 - 담당자:
+- docker image:
+- container name:
 
 ## 로그
 

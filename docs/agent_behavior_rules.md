@@ -28,6 +28,9 @@
 - Separate smoke validation from claim-making experiments.
 - Keep one main hypothesis per experimental change.
 - Record the exact fixed conditions before claiming improvements.
+- Run experiments in the project Docker container by default, not directly on the host.
+- Prefer a keep-alive GPU-capable container for iterative work so environment drift stays controlled.
+- When Docker or GPU is unavailable or intentionally bypassed, document that deviation explicitly.
 
 ## Documentation Rules
 
